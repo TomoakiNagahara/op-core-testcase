@@ -24,7 +24,7 @@ namespace OP;
 
 //	...
 if( Env::AppID() !== OP::AppID() ){
-	Notice("OP::AppID() is broken.");
+	throw new \Exception('Env::AppID() and OP::AppID() do not match.');
 }
 
 //	...
