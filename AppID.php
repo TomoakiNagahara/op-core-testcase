@@ -36,13 +36,21 @@ try {
 	$test[__LINE__] = Env::AppID();
 	//	Overwrite AppID.
 	$test[__LINE__] = Env::AppID('testcase');
+
+	//	Check if error.
+	if( OP::Error()->Has() ){
+		$test[__LINE__] = OP::Error()->Get()['message'];
+		D($test);
+		return;
+	}
+
 } catch ( \Throwable $e ){
 	//	...
 	$test[__LINE__] = $e->getMessage();
 
 	//	...
-	if( Notice::Has() ){
-		$test[__LINE__] = Notice::Get()['message'];
+	if( OP::Notice::Has() ){
+		$test[__LINE__] = OP::Notice::Get()['message'];
 	}else{
 		/* CI is in used.
 		Notice::Set("Feature of set AppID by argument will deprecated.");
@@ -60,4 +68,4 @@ try {
 D($test);
 
 //	...
-Notice("Please correct can duplicate registration of AppID.");
+OP::Notice("Please correct can duplicate registration of AppID.");
