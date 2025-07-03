@@ -23,6 +23,18 @@ declare(strict_types=1);
 namespace OP;
 
 //	...
+D([
+	'_APP_ID_'     => _APP_ID_,
+	'OP::AppID()'  => OP::AppID(),
+	'Env::AppID()' => Env::AppID(),
+]);
+
+//	...
+if( _APP_ID_ !== OP::AppID() ){
+	throw new \Exception('_APP_ID_ and OP::AppID() do not match.');
+}
+
+//	...
 if( Env::AppID() !== OP::AppID() ){
 	throw new \Exception('Env::AppID() and OP::AppID() do not match.');
 }
