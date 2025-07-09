@@ -29,12 +29,12 @@ D([
 	'Env::AppID()' => Env::AppID(),
 ]);
 
-//	...
+//	Check if equal const and OP.
 if( _APP_ID_ !== OP::AppID() ){
 	throw new \Exception('_APP_ID_ and OP::AppID() do not match.');
 }
 
-//	...
+//	Check if equal Env and OP.
 if( Env::AppID() !== OP::AppID() ){
 	throw new \Exception('Env::AppID() and OP::AppID() do not match.');
 }
@@ -45,9 +45,9 @@ $test = [];
 //	...
 try {
 	//	Get AppID.
-	$test[__LINE__] = Env::AppID();
+	$test[__LINE__] = OP::AppID();
 	//	Overwrite AppID.
-	$test[__LINE__] = Env::AppID('testcase');
+	$test[__LINE__] = OP::AppID('testcase');
 
 	//	Check if error.
 	if( OP::Error()->Has() ){
@@ -61,8 +61,8 @@ try {
 	$test[__LINE__] = $e->getMessage();
 
 	//	...
-	if( OP::Notice::Has() ){
-		$test[__LINE__] = OP::Notice::Get()['message'];
+	if( OP::Error()->Has() ){
+		$test[__LINE__] = OP::Error()->Get()['message'];
 	}else{
 		/* CI is in used.
 		Notice::Set("Feature of set AppID by argument will deprecated.");
@@ -80,4 +80,4 @@ try {
 D($test);
 
 //	...
-OP::Notice("Please correct can duplicate registration of AppID.");
+OP::Error("Please correct can duplicate registration of AppID.");
