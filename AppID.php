@@ -1,5 +1,5 @@
 <?php
-/**	op-core-testcase:/app_id.php
+/**	op-core-testcase:/AppID.php
  *
  * 1. Check can get AppID
  * 2. Check duplicate registration of AppID
