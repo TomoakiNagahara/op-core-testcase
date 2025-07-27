@@ -46,4 +46,4 @@ D($io);
 $headers['mime'] = 'text/html';
 $message = "<h1>{$subject}</h1><p>{$message}</p>";
 $io = OP::Mail($to, $subject, $message, $headers);
-D($io);
+D($io, $to, $subject, $message, $headers);
