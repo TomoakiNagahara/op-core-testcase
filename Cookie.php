@@ -17,8 +17,20 @@ namespace OP;
 $user_id = Cookie::UserID($init);
 
 //	...
+if( $init ){
+	OP()->Error('UserID has not been saved.');
+}
+
+//	...
 $key   = __FILE__.', '.__LINE__;
 $count = Cookie::Get($key, 0);
+
+//	...
+if( empty($count) ){
+	OP()->Error('Cookie has not been saved.');
+}
+
+//	...
 $count++;
 Cookie::Set($key, $count);
 
