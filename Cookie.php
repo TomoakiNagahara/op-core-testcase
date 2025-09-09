@@ -17,9 +17,10 @@ namespace OP;
 $user_id = Cookie::UserID($init);
 
 //	...
-$count = Cookie::Get('count', 0);
+$key   = __FILE__.', '.__LINE__;
+$count = Cookie::Get($key, 0);
 $count++;
-Cookie::Set('count', $count);
+Cookie::Set($key, $count);
 
 ?>
 <section class="markdown" data-translation="true">
@@ -45,4 +46,17 @@ echo Cookie::UserID();
 <section>
 	<p>UserID : <?= $user_id ?> (Initialization? <?= $init ? 'true':'false' ?>)</p>
 	<p>Count up : <?= $count ?></p>
+</section>
+
+<hr/>
+
+<section>
+<?php
+//	...
+$key    = __FILE__.', '.__LINE__;
+$count  = OP()->Cookie()->Get($key, 0);
+$count  = $count + 1;
+$result = OP()->Cookie()->Set($key, $count);
+D($count, $result);
+?>
 </section>
