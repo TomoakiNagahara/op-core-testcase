@@ -1,11 +1,12 @@
 <?php
-/**	op-core:/testcase/cookie.php
+/**	op-core:/testcase/Cookie.php
  *
- * @created   2021-05-15
- * @version   1.0
- * @package   op-core
- * @author    Tomoaki Nagahara
- * @copyright Tomoaki Nagahara All right reserved.
+ * @created    2021-05-15
+ * @version    1.0
+ * @package    op-core
+ * @subpackage testcase
+ * @author     Tomoaki Nagahara
+ * @copyright  Tomoaki Nagahara All right reserved.
  */
 
 /**	namespace
