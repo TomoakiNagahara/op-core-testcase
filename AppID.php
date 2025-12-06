@@ -5,11 +5,10 @@
  * 2. Check duplicate registration of AppID
  *
  * @created    2021-10-20
- * @version    1.0
+ * @license    Apache-2.0
  * @package    op-core
  * @subpackage testcase
- * @author     Tomoaki Nagahara
- * @copyright  Tomoaki Nagahara All right reserved.
+ * @copyright  (C) 2021 Tomoaki Nagahara
  */
 
 /**	Declare strict

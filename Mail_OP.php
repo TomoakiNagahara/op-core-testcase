@@ -2,11 +2,10 @@
 /**	op-core-testcase:/Mail_OP.php
  *
  * @created    2025-07-27
- * @version    1.0
+ * @license    Apache-2.0
  * @package    op-core
  * @subpackage testcase
- * @author     Tomoaki Nagahara
- * @copyright  Tomoaki Nagahara All right reserved.
+ * @copyright  (C) 2025 Tomoaki Nagahara
  */
 
 /**	Declare strict

@@ -1,11 +1,11 @@
 <?php
 /**	op-core:/testcase/session.php
  *
- * @created   2021-05-15
- * @version   1.0
- * @package   op-core
- * @author    Tomoaki Nagahara
- * @copyright Tomoaki Nagahara All right reserved.
+ * @created    2021-05-15
+ * @license    Apache-2.0
+ * @package    op-core
+ * @subpackage testcase
+ * @copyright  (C) 2021 Tomoaki Nagahara
  */
 
 /**	namespace
